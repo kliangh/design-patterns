@@ -6,17 +6,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SingletonTest {
-    private Singleton instance1 = null;
-    private Singleton instance2 = null;
+    private Singleton firstInstance;
+    private Singleton secondInstance;
 
     @BeforeEach
     void setUp() {
-        instance1 = Singleton.getInstance();
-        instance2 = Singleton.getInstance();
+        firstInstance = Singleton.getInstance();
+        secondInstance = Singleton.getInstance();
     }
 
     @Test
     void checkInstance() {
-        assertEquals(instance1, instance1);
+        assertEquals(firstInstance, secondInstance);
     }
 }
