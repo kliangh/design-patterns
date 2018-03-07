@@ -1,21 +1,20 @@
 package code.kliangh.creational.singleton;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-class SingletonInitiatorTest {
+public class SingletonInitiatorTest {
     private Singleton instanceGeneratedByInitiator;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() {
         new SingletonInitiator();
         instanceGeneratedByInitiator = Singleton.getInstance();
     }
 
     @Test
-    void validInstanceGeneratedByInitiator() {
-        assertEquals(Singleton.getInstance(), instanceGeneratedByInitiator);
+    public void validInstanceGeneratedByInitiator() {
+        Assert.assertEquals(Singleton.getInstance(), instanceGeneratedByInitiator);
     }
 }
