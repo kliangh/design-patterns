@@ -4,13 +4,13 @@ public class VehicleFactory {
 
     public Vehicle buildVehicle(java.lang.String owner, VehicleType vehicleType) {
         switch (vehicleType) {
-            case Coupe:
+            case COUPE:
                 return new Coupe(owner);
 
-            case Sedan:
+            case SEDAN:
                 return new Sedan(owner);
 
-            case Wagon:
+            case WAGON:
                 return new Wagon(owner);
 
             default:

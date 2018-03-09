@@ -15,7 +15,7 @@ public class VehicleFactoryTest {
     @Test
     public void tryToBuildACoupe() {
         String owner = "John";
-        Vehicle coupe = vehicleFactory.buildVehicle(owner, VehicleType.Coupe);
+        Vehicle coupe = vehicleFactory.buildVehicle(owner, VehicleType.COUPE);
 
         Assert.assertTrue(coupe instanceof Coupe);
         Assert.assertEquals(owner, coupe.showOwnerIdentity());
@@ -24,7 +24,7 @@ public class VehicleFactoryTest {
     @Test
     public void tryToBuildASedan() {
         String owner = "Doe";
-        Vehicle sedan = vehicleFactory.buildVehicle(owner, VehicleType.Sedan);
+        Vehicle sedan = vehicleFactory.buildVehicle(owner, VehicleType.SEDAN);
 
         Assert.assertTrue(sedan instanceof Sedan);
         Assert.assertEquals(owner, sedan.showOwnerIdentity());
@@ -33,7 +33,7 @@ public class VehicleFactoryTest {
     @Test
     public void tryToBuildAWagon() {
         String owner = "Foo";
-        Vehicle wagon = vehicleFactory.buildVehicle(owner, VehicleType.Wagon);
+        Vehicle wagon = vehicleFactory.buildVehicle(owner, VehicleType.WAGON);
 
         Assert.assertTrue(wagon instanceof Wagon);
         Assert.assertEquals(owner, wagon.showOwnerIdentity());
@@ -42,7 +42,7 @@ public class VehicleFactoryTest {
     @Test
     public void tryToBuildALorry() {
         String owner = "nobody";
-        Vehicle lorry = vehicleFactory.buildVehicle(owner, VehicleType.Lorry);
+        Vehicle lorry = vehicleFactory.buildVehicle(owner, VehicleType.LORRY);
 
         Assert.assertNull(lorry);
     }
