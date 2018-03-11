@@ -12,8 +12,6 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.projectlombok:lombok:1.16.20'
-
     compile 'com.google.guava:guava:24.0-jre'
     compile 'org.apache.commons:commons-lang3:3.7'
 

@@ -1,13 +1,11 @@
 package code.kliangh.creational.builder;
 
 import com.google.common.collect.ImmutableList;
-import lombok.Setter;
 
 import java.util.Map;
 
 /* Director */
 public class Chef {
-    @Setter
     private Map<String, Cook> cooks;
 
     public Dish serveDish() {
@@ -23,4 +21,9 @@ public class Chef {
 
         return dish;
     }
+
+    public void setCooks(Map<String, Cook> cooks) {
+        this.cooks = cooks;
+    }
+
 }

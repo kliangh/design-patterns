@@ -1,14 +1,24 @@
 package code.kliangh.creational.builder;
 
-import lombok.Data;
-
-import java.util.List;
-
 /* Product */
-@Data
 public class Dish {
     private String dishName;
 
     private DishType dishType;
 
+    public String getDishName() {
+        return dishName;
+    }
+
+    public void setDishName(String dishName) {
+        this.dishName = dishName;
+    }
+
+    public DishType getDishType() {
+        return dishType;
+    }
+
+    public void setDishType(DishType dishType) {
+        this.dishType = dishType;
+    }
 }
