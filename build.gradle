@@ -12,8 +12,12 @@ repositories {
 }
 
 dependencies {
+    compileOnly 'org.projectlombok:lombok:1.16.20'
 
-    testCompile "junit:junit:4.12"
+    compile 'com.google.guava:guava:24.0-jre'
+    compile 'org.apache.commons:commons-lang3:3.7'
+
+    testCompile 'junit:junit:4.12'
 }
 
 jacocoTestReport {

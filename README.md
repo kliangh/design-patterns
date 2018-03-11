@@ -4,3 +4,4 @@
 ## Creational pattern
 * Singleton
 * Factory
+* Builder
