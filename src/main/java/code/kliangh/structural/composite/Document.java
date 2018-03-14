@@ -1,11 +1,10 @@
 package code.kliangh.structural.composite;
 
 public interface Document {
-    void addComponent(Document document);
 
-    void removeComponent(Document document);
+    int countPages();
 
-    Document getChild(Document document);
+    int getLevel();
 
-    int countTotalDocument(Document document);
+    boolean isTerminalNode();
 }
