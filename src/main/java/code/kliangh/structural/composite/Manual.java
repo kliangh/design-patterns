@@ -1,8 +1,6 @@
 package code.kliangh.structural.composite;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Manual extends Publication {
     private String manualName;
@@ -11,7 +9,7 @@ public class Manual extends Publication {
 
     private boolean isTerminalNode = false;
 
-    private List<Document> chapters;
+    private Set<Document> chapters;
 
     @Override
     public void addComponent(Document document) {
@@ -51,6 +49,11 @@ public class Manual extends Publication {
                   Document... chapters) {
         this.manualName = manualName;
         this.level = level;
-        this.chapters = new ArrayList(Arrays.asList(chapters));
+        this.chapters = new HashSet<>(Arrays.asList(chapters));
     }
+
+    public String getManualName() {
+        return manualName;
+    }
+
 }

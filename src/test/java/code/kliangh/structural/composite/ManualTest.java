@@ -3,9 +3,7 @@ package code.kliangh.structural.composite;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class ManualTest {
     private Chapter firstChapter;
@@ -56,6 +54,11 @@ public class ManualTest {
     public void countPages() {
         assertEquals(firstChapterPages + secondChapterPages,
                 testManual.countPages());
+    }
+
+    @Test
+    public void getManualName() {
+        assertTrue(manualName.equals(testManual.getManualName()));
     }
 
     @Test
