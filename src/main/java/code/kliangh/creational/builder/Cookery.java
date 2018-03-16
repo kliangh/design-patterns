@@ -11,6 +11,6 @@ public enum Cookery {
     }
 
     public String getPrefix() {
-        return prefix;
+        return this.prefix;
     }
 }

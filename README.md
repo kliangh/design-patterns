@@ -7,3 +7,4 @@
 * Builder
 ## Structural patterns
 * Composite
+* Flyweight
