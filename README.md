@@ -8,3 +8,4 @@
 ## Structural patterns
 * Composite
 * Flyweight
+* Adapter (Wrapper)
