@@ -13,14 +13,14 @@ public class AdapterTest {
 
     private Socket bs546Socket;
 
-    private PowerAdapter powerAdapter;
+    private Socket creepySocket;
 
     @Before
     public void setUp() {
         this.macBook = new MacBook();
         this.jisSocket = new JisSocket();
         this.bs546Socket = new Bs546Socket();
-        this.powerAdapter = new PowerAdapter();
+        this.creepySocket = new CreepySocket();
     }
 
     @Test
@@ -30,7 +30,7 @@ public class AdapterTest {
 
     @Test
     public void chargeMacBook() {
-        macBook.chargeMacBook(jisSocket, powerAdapter);
+        macBook.chargeMacBook(jisSocket);
         assertTrue(macBook.getChargingStatus());
 
         macBook.stopChargingMacBook();
@@ -39,7 +39,10 @@ public class AdapterTest {
 
     @Test
     public void chargeMacBookWithUnsupportedVoltage() {
-        macBook.chargeMacBook(bs546Socket, powerAdapter);
+        macBook.chargeMacBook(bs546Socket);
+        assertFalse(macBook.getChargingStatus());
+
+        macBook.chargeMacBook(creepySocket);
         assertFalse(macBook.getChargingStatus());
     }
 }

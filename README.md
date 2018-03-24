@@ -9,3 +9,4 @@
 * Composite
 * Flyweight
 * Adapter (Wrapper)
+    - Composition structure
