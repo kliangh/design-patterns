@@ -5,6 +5,7 @@
 * Singleton
 * Factory
 * Builder
+* Prototype
 ## Structural patterns
 * Composite
 * Flyweight
