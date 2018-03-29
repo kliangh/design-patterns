@@ -11,3 +11,5 @@
 * Flyweight
 * Adapter (Wrapper)
     - Composition structure
+## Behavioral patterns
+* Strategy
