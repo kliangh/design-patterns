@@ -11,7 +11,7 @@ I'm try to implement design pattern by using realistic scenario in life.
 - [x] Composite
 - [x] Flyweight
 - [ ] Adapter (Wrapper)
-    - [ ] Composition structure
+    - [x] Composition structure
 ## Behavioral patterns
 - [x] Strategy
-- [ ] Mercury
+- [ ] Facade
