@@ -3,14 +3,15 @@
 I'm try to implement design pattern by using realistic scenario in life.  
 
 ## Creational patterns
-* Singleton
-* Factory
-* Builder
-* Prototype
+- [x] Singleton
+- [x] Factory
+- [x] Builder
+- [x] Prototype
 ## Structural patterns
-* Composite
-* Flyweight
-* Adapter (Wrapper)
-    - Composition structure
+- [x] Composite
+- [x] Flyweight
+- [ ] Adapter (Wrapper)
+    - [ ] Composition structure
 ## Behavioral patterns
-* Strategy
+- [x] Strategy
+- [ ] Mercury
