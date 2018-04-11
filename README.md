@@ -12,6 +12,12 @@ I'm try to implement design pattern by using realistic scenario in life.
 - [x] Flyweight
 - [ ] Adapter (Wrapper)
     - [x] Composition structure
+    - [ ] Inheritance
+    > [Composition over Inheritance][COI]
+    > [Liskov's Substitution Principle][LSP]
 ## Behavioral patterns
 - [x] Strategy
 - [ ] Facade
+
+[COI]: http://clean-code-developer.com/grades/grade-1-red/#Favour_Composition_over_Inheritance_FCoI
+[LSP]: http://www.oodesign.com/liskov-s-substitution-principle.html
