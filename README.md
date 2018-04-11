@@ -13,8 +13,8 @@ I'm try to implement design pattern by using realistic scenario in life.
 - [ ] Adapter (Wrapper)
     - [x] Composition structure
     - [ ] Inheritance
-    > [Composition over Inheritance][COI]
-    > [Liskov's Substitution Principle][LSP]
+    > [Composition over Inheritance][COI]  
+      [Liskov's Substitution Principle][LSP]
 ## Behavioral patterns
 - [x] Strategy
 - [ ] Facade
