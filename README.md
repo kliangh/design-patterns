@@ -1,6 +1,6 @@
 # Design Patterns
 [![Build Status](https://img.shields.io/travis/kliangh/design-patterns.svg)](https://travis-ci.org/kliangh/design-patterns) [![codecov](https://img.shields.io/codecov/c/github/kliangh/design-patterns.svg)](https://codecov.io/gh/kliangh/design-patterns)  
-I'm try to implement design pattern by using realistic scenario in life.  
+I'm trying to implement design pattern by using realistic scenario in life.  
 
 ## Creational patterns
 - [x] Singleton
@@ -18,6 +18,7 @@ I'm try to implement design pattern by using realistic scenario in life.
 - [ ] Facade
 ## Behavioral patterns
 - [x] Strategy
+- [ ] Observer
 
 [COI]: http://clean-code-developer.com/grades/grade-1-red/#Favour_Composition_over_Inheritance_FCoI
 [LSP]: http://www.oodesign.com/liskov-s-substitution-principle.html
