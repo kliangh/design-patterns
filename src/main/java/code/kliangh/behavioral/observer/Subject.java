@@ -8,5 +8,5 @@ public interface Subject {
 
     void notifyObservers();
 
-    Object getUpate(Observer observer);
+    Object getUpdate(Observer observer);
 }
