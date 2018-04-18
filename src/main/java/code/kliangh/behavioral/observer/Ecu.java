@@ -2,19 +2,15 @@ package code.kliangh.behavioral.observer;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Ecu implements Subject {
     private List<Observer> observers;
 
-    private Map<String, Status> statuses;
-
-    private String message;
-
-    private Boolean changed;
+    private List<Alarm> alarms;
 
     public Ecu() {
         this.observers = new ArrayList<>();
+        this.alarms = new ArrayList<>();
     }
 
     @Override
@@ -41,16 +37,16 @@ public class Ecu implements Subject {
 
     @Override
     public synchronized void notifyObservers() {
-        if (changed == false) {
-            return;
-        }
-
         List<Observer> observers = new ArrayList<>(this.observers);
         observers.forEach(Observer::update);
     }
 
     @Override
     public Object getUpdate(Observer observer) {
-        return this.message;
+        return this.alarms;
+    }
+
+    public void addAlarm(Alarm alarm) {
+        this.alarms.add(alarm);
     }
 }
