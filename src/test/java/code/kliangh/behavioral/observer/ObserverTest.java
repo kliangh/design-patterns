@@ -55,6 +55,9 @@ public class ObserverTest {
         ecu.register(hud);
         hud.setSubject(ecu);
 
+        //Register hud twice, make sure there are no duplicate indexes
+        ecu.register(hud);
+
         List<Observer> observers = ecu.getObservers();
         assertTrue(observers.size() == 2);
 
@@ -63,6 +66,9 @@ public class ObserverTest {
         assertTrue(observers.size() == 1);
         Observer observer = observers.get(0);
         assertTrue(observer instanceof Infotainment);
+
+        //Deregister hud twice, make sure nothing happens.
+        ecu.deregister(hud);
     }
 
     @Test(expected = NullPointerException.class)

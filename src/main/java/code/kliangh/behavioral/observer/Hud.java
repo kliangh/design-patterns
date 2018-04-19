@@ -16,7 +16,7 @@ public class Hud implements Observer {
     public void update() {
         List<Alarm> alarms = (List<Alarm>) ecu.getUpdate(this);
 
-        if (alarms == null || alarms.size() == 0) {
+        if (alarms.size() == 0) {
             System.out.println("Hud: " + currentVelocity + "km/hr");
         } else {
             alarms.forEach(System.out::println);

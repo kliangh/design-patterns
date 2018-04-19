@@ -13,7 +13,7 @@ public class Infotainment implements Observer {
     public void update() {
         List<Alarm> alarms = (List<Alarm>) ecu.getUpdate(this);
 
-        if (alarms == null || alarms.size() == 0) {
+        if (alarms.size() == 0) {
             System.out.println("All Good");
         } else {
             System.out.print("Infotainment Warning: ");
