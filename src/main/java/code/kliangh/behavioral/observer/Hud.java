@@ -2,11 +2,14 @@ package code.kliangh.behavioral.observer;
 
 import java.util.List;
 
-public class Infotainment implements Observer {
+public class Hud implements Observer {
     private Subject ecu;
 
-    public Infotainment(Subject ecu) {
+    private Integer currentVelocity;
+
+    public Hud(Subject ecu) {
         this.ecu = ecu;
+        this.currentVelocity = 0;
     }
 
     @Override
@@ -14,11 +17,11 @@ public class Infotainment implements Observer {
         List<Alarm> alarms = (List<Alarm>) ecu.getUpdate(this);
 
         if (alarms == null || alarms.size() == 0) {
-            System.out.println("All Good");
+            System.out.println("Hud: " + currentVelocity + "km/hr");
         } else {
-            System.out.print("Infotainment Warning: ");
             alarms.forEach(System.out::println);
         }
+
     }
 
     @Override

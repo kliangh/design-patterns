@@ -49,4 +49,8 @@ public class Ecu implements Subject {
     public void addAlarm(Alarm alarm) {
         this.alarms.add(alarm);
     }
+
+    public List<Observer> getObservers() {
+        return this.observers;
+    }
 }
