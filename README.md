@@ -18,7 +18,7 @@ I'm trying to implement design pattern by using realistic scenario in life.
 - [ ] Facade
 ## Behavioral patterns
 - [x] Strategy
-- [ ] Observer
+- [x] Observer
 
 [COI]: http://clean-code-developer.com/grades/grade-1-red/#Favour_Composition_over_Inheritance_FCoI
 [LSP]: http://www.oodesign.com/liskov-s-substitution-principle.html
