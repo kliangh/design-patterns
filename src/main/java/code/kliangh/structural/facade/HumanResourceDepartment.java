@@ -1,6 +1,9 @@
 package code.kliangh.structural.facade;
 
-public interface HumanResourceDepartment extends Department{
+/**
+ * This is a service.
+ */
+public interface HumanResourceDepartment {
     void arrangeInterview();
 
     Staff findStaff(String name);

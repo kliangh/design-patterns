@@ -1,11 +1,13 @@
 package code.kliangh.structural.facade;
 
 public abstract class Staff {
-    private String firstName;
+    String firstName;
 
-    private String surName;
+    String surName;
 
-    private Department department;
+    Department department;
+
+    Boolean isEnable;
 
     public String getFirstName() {
         return firstName;
@@ -29,5 +31,13 @@ public abstract class Staff {
 
     public void setDepartment(Department department) {
         this.department = department;
+    }
+
+    public Boolean isEnable() {
+        return isEnable;
+    }
+
+    public void disable() {
+        this.isEnable = false;
     }
 }

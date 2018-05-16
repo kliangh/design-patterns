@@ -1,4 +1,8 @@
 package code.kliangh.structural.facade;
 
-public interface Department {
+public enum Department {
+    HUMAN_RESOURCE,
+    ADMINISTRATION,
+    DEVELOPMENT,
+    MAIL_ROOM
 }
