@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Optional;
+
 public class VehicleFactoryTest {
     private VehicleFactory vehicleFactory;
 
@@ -15,36 +17,28 @@ public class VehicleFactoryTest {
     @Test
     public void tryToBuildACoupe() {
         String owner = "John";
-        Vehicle coupe = vehicleFactory.buildVehicle(owner, VehicleType.COUPE);
+        Optional<Vehicle> coupe = vehicleFactory.buildVehicle(owner, VehicleType.COUPE);
 
-        Assert.assertTrue(coupe instanceof Coupe);
-        Assert.assertEquals(owner, coupe.showOwnerIdentity());
+        Assert.assertTrue(coupe.get() instanceof Coupe);
+        Assert.assertEquals(owner, coupe.get().showOwnerIdentity());
     }
 
     @Test
     public void tryToBuildASedan() {
         String owner = "Doe";
-        Vehicle sedan = vehicleFactory.buildVehicle(owner, VehicleType.SEDAN);
+        Optional<Vehicle> sedan = vehicleFactory.buildVehicle(owner, VehicleType.SEDAN);
 
-        Assert.assertTrue(sedan instanceof Sedan);
-        Assert.assertEquals(owner, sedan.showOwnerIdentity());
+        Assert.assertTrue(sedan.get() instanceof Sedan);
+        Assert.assertEquals(owner, sedan.get().showOwnerIdentity());
     }
 
     @Test
     public void tryToBuildAWagon() {
         String owner = "Foo";
-        Vehicle wagon = vehicleFactory.buildVehicle(owner, VehicleType.WAGON);
+        Optional<Vehicle> wagon = vehicleFactory.buildVehicle(owner, VehicleType.WAGON);
 
-        Assert.assertTrue(wagon instanceof Wagon);
-        Assert.assertEquals(owner, wagon.showOwnerIdentity());
-    }
-
-    @Test
-    public void tryToBuildALorry() {
-        String owner = "nobody";
-        Vehicle lorry = vehicleFactory.buildVehicle(owner, VehicleType.LORRY);
-
-        Assert.assertNull(lorry);
+        Assert.assertTrue(wagon.get() instanceof Wagon);
+        Assert.assertEquals(owner, wagon.get().showOwnerIdentity());
     }
 
 }
