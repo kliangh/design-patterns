@@ -1,18 +1,29 @@
 package code.kliangh.structural.facade;
 
+import com.google.common.collect.ImmutableList;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import code.kliangh.structural.facade.Developer.Skill;
+
+import static org.junit.Assert.assertEquals;
 
 public class VisitorTest {
 
     private Visitor visitor;
 
+    private Developer respondent;
+
     @Before
     public void setUp() {
-        visitor = new Visitor("kliangh", Purpose.DELIEVERY, "Foo");
+        respondent = new Developer("Foo",
+                ImmutableList.of(
+                        Skill.JAVA,
+                        Skill.PYTHON,
+                        Skill.CLI));
+
+        visitor = new Visitor("kliangh", Purpose.DELIVERY, respondent);
     }
 
     @Test
@@ -22,23 +33,26 @@ public class VisitorTest {
 
     @Test
     public void getPurpose() {
-        Purpose.DELIEVERY.equals(visitor.getPurpose());
+        Purpose.DELIVERY.equals(visitor.getPurpose());
     }
 
     @Test
-    public void getAdditionalInfo() {
-        StringUtils.equals("Foo", visitor.getAdditionalInfo());
+    public void getRespondent() {
+        visitor.getRespondent().equals(respondent);
+    }
+
+    @Test
+    public void setRespondent() {
+        Staff anotherRespondent = new Receptionist("Foo");
+        visitor.setRespondent(anotherRespondent);
+
+        assertEquals(anotherRespondent, visitor.getRespondent());
     }
 
     @Test
     public void setPurpose() {
         visitor.setPurpose(Purpose.INTERVIEW);
-        Purpose.INTERVIEW.equals(visitor.getPurpose());
+        assertEquals(Purpose.INTERVIEW, visitor.getPurpose());
     }
 
-    @Test
-    public void setAdditionalInfo() {
-        visitor.setAdditionalInfo("Bar");
-        StringUtils.equals("Bar", visitor.getAdditionalInfo());
-    }
 }

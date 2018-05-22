@@ -5,12 +5,13 @@ package code.kliangh.structural.facade;
  */
 public class Receptionist extends Staff {
 
-    private HumanResourceDepartment humanResourceDepartment;
+    private HumanResourceService humanResourceService;
 
-    public Receptionist(String firstName, String surName, Department department) {
-        this.firstName = firstName;
-        this.surName = surName;
-        this.department = department;
+    private MailRoom mailRoom;
+
+    public Receptionist(String name) {
+        this.name = name;
+        this.department = Department.ADMINISTRATION;
         this.isEnable = true;
     }
 
@@ -19,8 +20,9 @@ public class Receptionist extends Staff {
     }
 
     public void provideAssistance(Visitor visitor) {
-        if (visitor.getPurpose().equals(Purpose.DELIEVERY)) {
-            humanResourceDepartment.findStaff(visitor.getAdditionalInfo());
+        if (visitor.getPurpose().equals(Purpose.DELIVERY)) {
+            humanResourceService.findStaff(visitor.getRespondent());
+
         }
     }
 }

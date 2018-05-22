@@ -1,28 +1,18 @@
 package code.kliangh.structural.facade;
 
 public abstract class Staff {
-    String firstName;
-
-    String surName;
+    String name;
 
     Department department;
 
     Boolean isEnable;
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getSurName() {
-        return surName;
-    }
-
-    public void setSurName(String surName) {
-        this.surName = surName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Department getDepartment() {

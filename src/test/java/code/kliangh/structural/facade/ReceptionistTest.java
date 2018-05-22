@@ -1,11 +1,9 @@
 package code.kliangh.structural.facade;
 
-import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class ReceptionistTest {
 
@@ -13,40 +11,29 @@ public class ReceptionistTest {
 
     @Before
     public void setUp() {
-        this.receptionist = new Receptionist("Kenyon", "Hou", Department.ADMINISTRATION);
+        this.receptionist = new Receptionist("Kenyon");
     }
 
     @Test
-    public void getFirstName() {
-        StringUtils.equals("Kenyon", receptionist.getFirstName());
+    public void getName() {
+        assertEquals("Kenyon", receptionist.getName());
     }
 
     @Test
-    public void setFirstName() {
-        receptionist.setFirstName("Foo");
-        StringUtils.equals("Foo", receptionist.getFirstName());
-    }
-
-    @Test
-    public void getSurName() {
-        StringUtils.equals("Hou", receptionist.getSurName());
-    }
-
-    @Test
-    public void setSurName() {
-        receptionist.setSurName("Bar");
-        StringUtils.equals("Bar", receptionist.getSurName());
+    public void setName() {
+        receptionist.setName("Bar");
+        assertEquals("Bar", receptionist.getName());
     }
 
     @Test
     public void getDepartment() {
-        Department.ADMINISTRATION.equals(receptionist.getDepartment());
+        assertEquals(Department.ADMINISTRATION, receptionist.getDepartment());
     }
 
     @Test
     public void setDepartment() {
         receptionist.setDepartment(Department.DEVELOPMENT);
-        Department.DEVELOPMENT.equals(receptionist.getDepartment());
+        assertEquals(Department.DEVELOPMENT, receptionist.getDepartment());
     }
 
     @Test
@@ -63,6 +50,6 @@ public class ReceptionistTest {
     @Test
     public void greet() {
         String greeting = "Hello, welcome! How can I help?";
-        StringUtils.equals(greeting, receptionist.greet());
+        assertEquals(greeting, receptionist.greet());
     }
 }

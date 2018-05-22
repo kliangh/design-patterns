@@ -14,12 +14,12 @@ public class Visitor {
 
     private Purpose purpose;
 
-    private String additionalInfo;
+    private Staff respondent;
 
-    public Visitor(String name, Purpose purpose, String additionalInfo) {
+    public Visitor(String name, Purpose purpose, Staff respondent) {
         this.name = name;
         this.purpose = purpose;
-        this.additionalInfo = additionalInfo;
+        this.respondent = respondent;
     }
 
     public String getName() {
@@ -34,11 +34,11 @@ public class Visitor {
         this.purpose = purpose;
     }
 
-    public String getAdditionalInfo() {
-        return additionalInfo;
+    public Staff getRespondent() {
+        return respondent;
     }
 
-    public void setAdditionalInfo(String additionalInfo) {
-        this.additionalInfo = additionalInfo;
+    public void setRespondent(Staff respondent) {
+        this.respondent = respondent;
     }
 }
