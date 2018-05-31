@@ -49,7 +49,7 @@ public class ObserverTest {
     }
 
     @Test
-    public void registerAndDregisterObserver() {
+    public void registerAndDeregisterObserver() {
         hud = new Hud(ecu);
 
         ecu.register(hud);
