@@ -15,11 +15,14 @@ public class ReceptionistTest {
 
     private Developer developer;
 
+    private Visitor interviewee;
+
     @Before
     public void setUp() {
         this.receptionist = new Receptionist("Kenyon");
         this.developer = new Developer("Foo", ImmutableList.of());
         this.courier = new Visitor("Bar", Purpose.DELIVERY, developer);
+        this.interviewee = new Visitor("Zoo", Purpose.INTERVIEW, developer);
     }
 
     @Test
@@ -64,5 +67,6 @@ public class ReceptionistTest {
     @Test
     public void provideAssistance() {
         receptionist.provideAssistance(courier);
+        receptionist.provideAssistance(interviewee);
     }
 }

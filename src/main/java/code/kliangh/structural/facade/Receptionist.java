@@ -27,5 +27,10 @@ public class Receptionist extends Staff {
             humanResourceService.findStaff(visitor.getRespondent());
             mailRoomService.sortParcel();
         }
+
+        if (visitor.getPurpose().equals(Purpose.INTERVIEW)) {
+            Staff departmentManager = humanResourceService.findStaff(visitor.getRespondent()).get();
+            humanResourceService.arrangeInterview(visitor, departmentManager);
+        }
     }
 }

@@ -19,8 +19,10 @@ public class HumanResourceServiceImpl implements HumanResourceService {
     }
 
     @Override
-    public void arrangeInterview() {
-
+    public void arrangeInterview(Visitor interviewee, Staff departmentManager) {
+        System.out.println("Invite interviewee to meeting room.");
+        System.out.println("Invite department manager");
+        System.out.println("Start interview.");
     }
 
     @Override
