@@ -1,5 +1,7 @@
 package code.kliangh.structural.facade;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,9 +11,15 @@ public class ReceptionistTest {
 
     private Receptionist receptionist;
 
+    private Visitor courier;
+
+    private Developer developer;
+
     @Before
     public void setUp() {
         this.receptionist = new Receptionist("Kenyon");
+        this.developer = new Developer("Foo", ImmutableList.of());
+        this.courier = new Visitor("Bar", Purpose.DELIVERY, developer);
     }
 
     @Test
@@ -51,5 +59,10 @@ public class ReceptionistTest {
     public void greet() {
         String greeting = "Hello, welcome! How can I help?";
         assertEquals(greeting, receptionist.greet());
+    }
+
+    @Test
+    public void provideAssistance() {
+        receptionist.provideAssistance(courier);
     }
 }

@@ -1,18 +1,21 @@
 package code.kliangh.structural.facade;
 
 /**
- * This is an entry of facade.
+ * This is a facade.
  */
 public class Receptionist extends Staff {
 
     private HumanResourceService humanResourceService;
 
-    private MailRoom mailRoom;
+    private MailRoomService mailRoomService;
 
-    public Receptionist(String name) {
+    Receptionist(String name) {
         this.name = name;
         this.department = Department.ADMINISTRATION;
         this.isEnable = true;
+
+        this.humanResourceService = new HumanResourceServiceImpl();
+        this.mailRoomService = new MailRoomServiceImpl();
     }
 
     public String greet() {
@@ -22,7 +25,7 @@ public class Receptionist extends Staff {
     public void provideAssistance(Visitor visitor) {
         if (visitor.getPurpose().equals(Purpose.DELIVERY)) {
             humanResourceService.findStaff(visitor.getRespondent());
-
+            mailRoomService.sortParcel();
         }
     }
 }
