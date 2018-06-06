@@ -15,7 +15,7 @@ I'm trying to implement design pattern by using realistic scenario in life.
     - [ ] Inheritance
     > [Composition over Inheritance][COI]  
       [Liskov's Substitution Principle][LSP]
-- [ ] Facade
+- [X] Facade
 ## Behavioral patterns
 - [x] Strategy
 - [x] Observer
