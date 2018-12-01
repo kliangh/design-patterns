@@ -14,4 +14,12 @@ public class Response implements Serializable {
     private Map<String, String> responseHeaders;
 
     private String responseBody;
+
+    public Map<String, String> getResponseHeaders() {
+        return responseHeaders;
+    }
+
+    public String getResponseBody() {
+        return responseBody;
+    }
 }
