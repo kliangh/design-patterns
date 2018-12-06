@@ -43,4 +43,17 @@ public class ChainOfResponsibilityTest {
         Assert.assertEquals(request.getHeaders(), response.getResponseHeaders());
         Assert.assertEquals("Result: " + request.getRequestBody(), response.getResponseBody());
     }
+
+    /**
+     * <p>The implementation demonstrated in {@code badPractice()} may scatter throughout plenty of
+     * services.</p>
+     * <p>Decoupling the scattered implementation from those services, allows you maintain the
+     * business easily.</p>
+     */
+    @Test
+    public void testRequestHandler() {
+        Response response = requestHandler.processRequest(request);
+        Assert.assertEquals(request.getHeaders(), response.getResponseHeaders());
+        Assert.assertEquals("Result: " + request.getRequestBody(), response.getResponseBody());
+    }
 }
