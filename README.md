@@ -19,7 +19,7 @@ I'm trying to implement design pattern by using realistic scenario in life.
 ## Behavioral patterns
 - [x] Strategy
 - [x] Observer
-- [ ] Chain of responsibility
+- [x] Chain of responsibility
 
 [COI]: http://clean-code-developer.com/grades/grade-1-red/#Favour_Composition_over_Inheritance_FCoI
 [LSP]: http://www.oodesign.com/liskov-s-substitution-principle.html
