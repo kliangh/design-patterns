@@ -17,6 +17,7 @@ public class SingletonTest {
     @Test
     public void checkInstance() {
         Assert.assertEquals(firstInstance, secondInstance);
+        Assert.assertTrue(firstInstance == secondInstance);
     }
 
 }

@@ -3,11 +3,9 @@ package code.kliangh.creational.singleton;
 public class Singleton {
     private static Singleton instance;
 
-    protected Singleton() {
+    private Singleton() {}
 
-    }
-
-    public static Singleton getInstance() {
+    public synchronized static Singleton getInstance() {
         if(instance == null) {
             instance = new Singleton();
         }
