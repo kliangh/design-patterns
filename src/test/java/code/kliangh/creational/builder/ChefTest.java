@@ -1,5 +1,7 @@
 package code.kliangh.creational.builder;
 
+import code.kliangh.creational.immutableobjects.Dish;
+import code.kliangh.creational.immutableobjects.DishType;
 import com.google.common.collect.ImmutableMap;
 import org.junit.Assert;
 import org.junit.Before;
