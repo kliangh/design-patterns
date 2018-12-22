@@ -7,6 +7,7 @@ I'm trying to implement design pattern by using realistic scenario in life.
 - [x] Factory
 - [x] Builder
 - [x] Prototype
+- [ ] Immutable objects
 ## Structural patterns
 - [x] Composite
 - [x] Flyweight
