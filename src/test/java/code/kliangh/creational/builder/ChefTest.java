@@ -2,32 +2,27 @@ package code.kliangh.creational.builder;
 
 import code.kliangh.creational.immutableobjects.Dish;
 import code.kliangh.creational.immutableobjects.DishType;
-import com.google.common.collect.ImmutableMap;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Map;
+import java.util.Arrays;
 
 public class ChefTest {
-    private Chef chef;
-    private static final String MAIN_DISH_NAME = "Roasted Beef with Mushroom Red Wine Sauce";
-
-    @Before
-    public void setUP() {
-        chef = new Chef();
-    }
+    private static final String MAIN_DISH_NAME = "Roast beef with red wind sauce";
 
     @Test
     public void serveMainDish() {
-        Map<String, Cook> cooks =ImmutableMap.of(
-                "SauceCook", new SauceCook(),
-                "RoastCook", new RoastCook());
 
-        chef.setCooks(cooks);
-        Dish mainDish = chef.serveDish();
+        Dish mainDish =
+                new Chef().setDishName(MAIN_DISH_NAME)
+                          .setDishType(DishType.MAIN)
+                          .setNotes(Arrays.asList("Slice beef into pieces.",
+                                                  "Eat with red wine sauce."))
+                          .serveDish();
 
         Assert.assertEquals(mainDish.getDishType(), DishType.MAIN);
         Assert.assertEquals(MAIN_DISH_NAME, mainDish.getDishName());
+        Assert.assertEquals("Slice beef into pieces.", mainDish.getNotes().get(0));
+        Assert.assertEquals("Eat with red wine sauce.", mainDish.getNotes().get(1));
     }
 }

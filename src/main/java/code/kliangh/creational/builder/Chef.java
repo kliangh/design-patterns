@@ -1,29 +1,37 @@
 package code.kliangh.creational.builder;
 
+import code.kliangh.creational.immutableobjects.Dish;
+import code.kliangh.creational.immutableobjects.DishType;
 import com.google.common.collect.ImmutableList;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 /* Director */
 public class Chef {
-    private Map<String, Cook> cooks;
+    private String dishName;
+
+    private DishType dishType;
+
+    private List<String> notes;
 
     public Dish serveDish() {
-        Dish dish = new Dish();
-
-        ProcessedIngredients sauce =
-                cooks.get("SauceCook").processIngredients(ImmutableList.of("Mushroom", "Red Wine"));
-        ProcessedIngredients roastedBeef =
-                cooks.get("RoastCook").processIngredients(ImmutableList.of("Beef"));
-
-        dish.setDishName(roastedBeef.getProcessedIngredientsName() + " with " + sauce.getProcessedIngredientsName());
-        dish.setDishType(DishType.MAIN);
-
-        return dish;
+        return new Dish(dishName, dishType, notes);
     }
 
-    public void setCooks(Map<String, Cook> cooks) {
-        this.cooks = cooks;
+    public Chef setDishName(String dishName) {
+        this.dishName = dishName;
+        return this;
     }
 
+    public Chef setDishType(DishType dishType) {
+        this.dishType = dishType;
+        return this;
+    }
+
+    public Chef setNotes(List<String> notes) {
+        this.notes = notes;
+        return this;
+    }
 }
