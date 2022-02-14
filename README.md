@@ -22,6 +22,7 @@ I'm trying to implement design pattern by using realistic scenario in life.
 - [x] Strategy
 - [x] Observer
 - [x] Chain of responsibility
+- [ ] Template
 
 ## Additional
 - [ ] Monad
